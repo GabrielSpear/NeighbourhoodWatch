@@ -1,4 +1,4 @@
-from .models import Profile, Post, Hood
+# from .models import Profile,Post,Hood
 from django import forms
 
 
