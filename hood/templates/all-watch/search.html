@@ -1,0 +1,24 @@
+{% extends 'all-watch/base.html' %} {% load static %}
+<!-- Content block -->
+{% block content %}
+<div class="container">
+ {% if business%}
+ <h2>found {{business|length}} of serached tearm {{message}}</h2> {%else%}
+ <h2>found 0 business for the searched term {{message}} </h2> {%endif%}
+</div>
+<div class="container">
+ <div class="row">
+
+  {%if business%} {%for business_items in business %}
+
+  <div class="col-lg-6">
+   <p>business name:{{business_items.name}}</p>
+   <p>business email:{{business_items.email}}</p>
+   <p>from :{{business_items.hood.name}}</p>
+   <p>owner:{{business_items.hood.admin}}</p>
+  </div>
+
+
+ </div>
+</div>
+{%endfor%} {%endif%} {%endblock%}
