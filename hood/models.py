@@ -4,9 +4,8 @@ from django.core.urlresolvers import reverse
 from django.contrib.auth.models import User
 from django.contrib.auth.models import Group
 
+
 # Create your models here.
-
-
 class GroupExtend(models.Model):
     group = models.OneToOneField(Group)
 
