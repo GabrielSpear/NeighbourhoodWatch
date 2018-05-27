@@ -1,0 +1,14 @@
+{% extends 'all-watch/base.html'%} {%block content%} {%for business_items in business%}
+<div class="w3-car">
+ <div class="container">
+  <div class="row">
+   <div class="col-xs-4 col-md-4 col-lg-4">
+    <p>business name:{{business_items.name}}</p>
+    <p>business email:{{business_items.email}}</p>
+    <p> from :{{business_items.hood.name}}</p>
+    <p>owner:{{business_items.hood.admin}}</p>
+   </div>
+  </div>
+ </div>
+</div>
+<br> {%endfor%} {%endblock%}
