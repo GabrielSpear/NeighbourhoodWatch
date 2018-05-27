@@ -12,3 +12,9 @@ class NewPostForm(forms.ModelForm):
     class Meta:
         model = Post
         exclude = ['user']
+
+
+class NewHoodForm(forms.ModelForm):
+    class Meta:
+        model = Hood
+        exclude = ['user']
