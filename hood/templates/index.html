@@ -1,0 +1,101 @@
+{%extends 'all-watch/base.html'%} {%load bootstrap3%} {% block content %} {{bock.super}}
+
+<!DOCTYPE{% load static%} html>
+<html lang="en">
+
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+ </head>
+
+ <body>
+  <div class="container">
+   <ul class="nav nav-tabs">
+    <li class="active">
+     <a href="#">Home</a>
+    </li>
+    <li class="dropdown">
+     <a class="dropdown-toggle" data-toggle="dropdown" href="#">business
+        <span class="caret"></span>
+      </a>
+     <ul class="dropdown-menu">
+      <li>
+       <a href="#">saloon and kinyozi</a>
+      </li>
+      <li>
+       <a href="#">hotels and kibandas</a>
+      </li>
+      <li>
+       <a href="#">car wash</a>
+      </li>
+      <li>
+       <li>
+        <a href="#">kiosk</a>
+       </li>
+       <li>
+        <li>
+         <a href="#">supermakert</a>
+        </li>
+     </ul>
+     </li>
+     <li>
+      <a href="#">police report</a>
+     </li>
+     <li>
+      <a href="#">health report</a>
+     </li>
+     <li><a data-toggle="tab" href="#hood">hood</a></li>
+   </ul>
+  </div>
+
+  {% for post_items in post%}
+  <div class="w3-car" ,style="width:90%;">
+   <div class="container">
+    <div class="row">
+     <div class="col-xs-4 col-md-4 col-lg-4">
+      <h3>{{post_items.user}}</h2>
+            <h5>{{post_items.title}}</h2>
+              {% for profile_items in profile%}
+          <a href="{% url 'profile' profile_items.id%}">{{profile_items.user}} </a>
+          <img src="{{profile_items.profile.image.url}}" alt="" style="width:25%;border-radius:50%">
+          {%endfor%}
+              <img src="{{post_items.image.url}}" alt="">
+              <h6>{{post_items.caption}}</h2>
+                <p>{{post_items.hood.location}}</p>
+                <p>{{post_items.hood.count}}</p>
+                <p>
+                  <a>view post</a>
+                </p>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+  {%endfor%} {% for hood_items in hood%}
+  <div class="w3-car">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-4 col-md-4 col-lg-4">
+          <ul class="tab-content">
+            <div id="hood" class="tab-pane fade">
+            <h2>Welcome to the watch</h2>
+            <p>{{post_items.hood.name}}</p>
+            <p>{{post_items.hood.location}}</p>
+            <p>{{post_items.hood.count}}</p>
+            <button><p><a>join group</a></p></button>
+          </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  {%endfor%}
+
+</body>
+
+</html>
+{% endblock %}
