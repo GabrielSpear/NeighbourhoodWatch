@@ -13,3 +13,7 @@ urlpatterns = [
     url(r'^search/', views.search_results, name='search_results'),
     url(r'^update/hood', views.update_hood, name="update_hood"),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL,
+                          document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL,               document_root=settings.STATIC_ROOT)
