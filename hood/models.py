@@ -81,3 +81,34 @@ class Business(models.Model):
     def update_business(cls):
         update = cls.objects.all()
         return update
+
+
+class Profile(models.Model):
+    name = models.CharField(max_length=90)
+    image = models.ImageField(upload_to='profile/', null=True, blank=True)
+    id = models.IntegerField
+    hood = models.ForeignKey(Hood, on_delete=models.CASCADE, null=True)
+    email = models.EmailField(null=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
+
+    def __str__(self):
+        return str(self.image)
+
+    def create_profile(self):
+        self.save
+
+    def save_profile(self):
+        self.save()
+
+    def delete_profile(self):
+        self.delete
+
+    @classmethod
+    def update_profile(self):
+        profile_update = cls.objects.filter(id).all()
+        return profile_update
+
+    @classmethod
+    def get_profile(self):
+        profile = Profile.objects.all()
+        return profile
