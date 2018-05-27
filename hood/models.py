@@ -14,3 +14,39 @@ class GroupExtend(models.Model):
 
     def delete_group(self):
         self.delete
+
+
+class Hood(models.Model):
+    name = models.CharField(max_length=90)
+    location = models.CharField(max_length=90)
+    count = models.IntegerField()
+    admin = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
+
+    def __str__(self):
+        return self.name
+
+    def create_hood(self):
+        self.save
+
+    def delete_hood(self):
+        self.delete
+
+    @classmethod
+    def get_hood(cls):
+        hood = cls.objects.all()
+        return hood
+
+    @classmethod
+    def find_hood(cls, hood_id):
+        query = cls.objects.filter(user__name__icontains=hood_id)
+        return query
+
+    @classmethod
+    def update_hood(cls):
+        hoody = cls.objects.all()
+        return hoody
+
+    @classmethod
+    def update_count(cls):
+        count = cls.objects.all()
+        return count
