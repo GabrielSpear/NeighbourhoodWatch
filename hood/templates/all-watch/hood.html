@@ -1,0 +1,17 @@
+{% extends 'all-watch/base.html'%} {%block content%} {% for post_items in post%}
+<div class="w3-car">
+ <div class="container ">
+  <div class="row">
+   <div class="col-xs-4 col-md-4 col-lg-4">
+    <h2>Welcome to the watch</h2>
+    <p>{{post_items.hood.name}}</p>
+    <p>{{post_items.hood.location}}</p>
+    <p>{{post_items.hood.count}}</p>
+    <button><p><a>join group</a></p></button>
+
+
+   </div>
+  </div>
+ </div>
+</div>
+{%endfor%} {%endblock%}
