@@ -112,3 +112,31 @@ class Profile(models.Model):
     def get_profile(self):
         profile = Profile.objects.all()
         return profile
+
+
+class Post(models.Model):
+    title = models.CharField(max_length=90, null=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
+    image = models.ImageField(upload_to='post/', null=True, blank=True)
+    caption = models.CharField(max_length=100)
+    hood = models.ForeignKey(Hood, on_delete=models.CASCADE, null=True)
+    profile = models.ForeignKey(Profile, on_delete=models.CASCADE, null=True)
+
+    def __str__(self):
+        return self.title
+
+    def create_post(self):
+        self.save
+
+    def delete_post(self):
+        self.delete
+
+    @classmethod
+    def get_post(cls):
+        post = Post.objects.all()
+        return post
+
+    @classmethod
+    def get_profile_posts(cls, profile_id):
+        profile_posts = Post.objects.filter(id=profile_id)
+        return profile_posts
