@@ -1,0 +1,21 @@
+{% extends 'all-watch/base.html'%}{%load static%} {%block content%} {% for profile_items in profile%}
+<div class="w3-car">
+ <div class="container">
+  <div class="row">
+   <div class="col-xs-4 col-md-4 col-lg-4">
+    <img src="{{profile_items.image.url}}">
+    <!-- <h3>{{post_profile.profile.user}} </h3> -->
+    <!-- <img src="{{post_profile.profile.image.url}}" alt="" style="width:75%;border-radius:50%"> -->
+    <h2>{{profile_items.name}}</h2>
+    <p>{{profile_items.hood}}</p>
+    <p>{{profile_items.hood.location}}</p>
+    <p>{{profile_items.email}}</p>
+    <p>{{profile_items.hood.count}}</p>
+    <p><a href="{% url 'update_hood'%}">change hood</a></p>
+
+
+   </div>
+  </div>
+ </div>
+</div>
+{%endfor%} {%endblock%}
