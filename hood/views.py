@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from . models import Hood, Business, Profile, Post
 from django.contrib.auth.decorators import login_required
 from . forms import NewProfileForm, NewPostForm, NewHoodForm
