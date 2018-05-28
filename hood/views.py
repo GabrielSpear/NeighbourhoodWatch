@@ -100,3 +100,15 @@ def search_results(request):
     else:
         message = "you haven't searched for any term"
         return render(request, 'all-watch/search.html', {"message": message})
+
+
+@login_required(login_url='/accounts/register')
+def hospital(request):
+    hospital = Business.objects.all()
+    return render(request, 'all-watch/business.html', {"business": business})
+
+
+@login_required(login_url='/accounts/register')
+def business(request):
+    business = Business.objects.all()
+    return render(request, 'all-watch/business.html', {"business": business})
