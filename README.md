@@ -4,24 +4,23 @@ NEIGBOURWATCH
 Description
 
 "This is an NeighbourWatch clone app."
-"'By Gabriel Gatumu'"
-
+'By Gabriel Gatumu'
 
 User Stories
 
 As a user I would like:
 
-""Sign in with the application to start using.
+"Sign in with the application to start using.
 Set up a profile about me and a general location and my neighborhood name.
 Find a list of different businesses in my neighborhood.
 Find Contact Information for the health department and Police authorities near my neighborhood.
 Create Posts that will be visible to everyone in my neighborhood.
 Change My neighborhood when I decide to move out.
-Only view details of a single neighborhood.""
+Only view details of a single neighborhood."
 
 Prerequisites
 
-'Django==1.11
+Django==1.11
 psycopg2==2.7.4
 pytz==2018.3
 confusable-homoglyphs==3.0.0
@@ -36,7 +35,7 @@ psycopg2-binary==2.7.4
 python-decouple==3.1
 pytz==2018.3
 whitenoise==3.3.1
-'
+
 
 How to use it
 
