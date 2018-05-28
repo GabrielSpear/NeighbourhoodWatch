@@ -1,6 +1,6 @@
 {% extends 'all-watch/base.html'%}{%load static%} {%block content%} {% for profile_items in profile%}
 <div class="w3-car">
- <div class="container">
+ <div class="styler" style="background-color: #89028e; color:white;" <div class="container" style="image-size: 20%;">
   <div class="row">
    <div class="col-xs-4 col-md-4 col-lg-4">
     <img src="{{profile_items.image.url}}">
@@ -11,11 +11,10 @@
     <p>{{profile_items.hood.location}}</p>
     <p>{{profile_items.email}}</p>
     <p>{{profile_items.hood.count}}</p>
-    <p><a href="{% url 'update_hood'%}">change hood</a></p>
-
-
+    <p><a href="{% url 'update_hood'%}">Change hood</a></p>
    </div>
   </div>
  </div>
+</div>
 </div>
 {%endfor%} {%endblock%}
