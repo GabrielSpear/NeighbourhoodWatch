@@ -1,9 +1,9 @@
-GramInsta
+NEIGBOURWATCH
 
 
 Description
 
-"This is an Instagram clone app."
+"This is an NeighbourWatch clone app."
 "'By Gabriel Gatumu'"
 
 
@@ -11,24 +11,32 @@ User Stories
 
 As a user I would like:
 
-    Sign in to the application to start using.
-    Upload my pictures to the application.
-    See my profile with all my pictures.
-    Follow other users and see their pictures on my timeline.
-    Like a picture and leave a comment on it.
+""Sign in with the application to start using.
+Set up a profile about me and a general location and my neighborhood name.
+Find a list of different businesses in my neighborhood.
+Find Contact Information for the health department and Police authorities near my neighborhood.
+Create Posts that will be visible to everyone in my neighborhood.
+Change My neighborhood when I decide to move out.
+Only view details of a single neighborhood.""
 
 Prerequisites
 
-    Python3.6.4
-    dj-database-url==0.4.2
-    Django==1.11
-    gunicorn==19.7.1
-    Pillow==5.0.0
-    psycopg2==2.7.4
-    psycopg2-binary==2.7.4
-    python-decouple==3.1
-    pytz==2018.3
-    whitenoise==3.3.1
+'Django==1.11
+psycopg2==2.7.4
+pytz==2018.3
+confusable-homoglyphs==3.0.0
+dj-database-url==0.4.2
+Django==1.11
+django-registration==2.4.1
+django-tinymce==2.7.0
+gunicorn==19.7.1
+Pillow==5.0.0
+psycopg2==2.7.4
+psycopg2-binary==2.7.4
+python-decouple==3.1
+pytz==2018.3
+whitenoise==3.3.1
+'
 
 How to use it
 
